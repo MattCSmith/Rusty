@@ -1,0 +1,14 @@
+{
+  "name": "zerobot",
+  "version": "3.0.0",
+  "description": "Discord bot for the ZTM community",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  }
+}
