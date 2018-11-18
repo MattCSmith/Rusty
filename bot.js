@@ -11,7 +11,6 @@ client.on("message", (message) => {
   if (message.content.startsWith("user")) {
     console.log(message.author.username, message.author.discriminator)
     console.log(message.author.avatarURL)
-    
   }
 });
  
