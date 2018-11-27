@@ -6,6 +6,7 @@ const MongoClient = require('mongodb').MongoClient
 
 
 module.exports = (client) => {
+    console.log(client.settings.mlabs)
     app.listen(port, function () {
         console.log('zerBot - Webserver is running on port:', port);
     })
@@ -17,7 +18,7 @@ module.exports = (client) => {
     app.get('/solutions', function (req, res) {
         console.log(req.query.day);
 
-        MongoClient.connect("mongodb://code_links:DEEpAaUwe3xp33k@ds163683.mlab.com:63683/code-snippet", { useNewUrlParser: true }, function (err, db) {
+        MongoClient.connect(client.settings.mlabs, { useNewUrlParser: true }, function (err, db) {
             if (err) throw err;
             var dbo = db.db("code-snippet");
             dbo.collection("snippets").find({ dayNumber: req.query.day }).toArray(function (err, result) {

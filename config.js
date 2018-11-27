@@ -9,7 +9,10 @@ const config = {
     "support": [],
   
     // Your Bot's Token. Available on https://discordapp.com/developers/applications/me
-    "token": require("./token.json").token,
+    "token": require("./tokens.json").token,
+
+    // mLab credentials
+    "mlabs": require("./tokens.json").mlabs,
   
 
     
