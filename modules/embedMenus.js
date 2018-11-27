@@ -23,9 +23,7 @@ exports.react =(client, reaction, user) => {
     // reaction.remove(user.id)
 
     // Grabs the embed title so we can check which embed the reaction belongs too
-    console.log("REST")
     const which = reaction.message.embeds[0].title
-    console.log(which)
     // Grabs the embed object with the matching title
     const object = embeds.filter(obj => {
         return obj.title === which
@@ -49,11 +47,8 @@ exports.react =(client, reaction, user) => {
 }
 
 exports.welcome = async (chan) => {
-    console.log("1")
     const welEmbed = require(`../menus/welcome.json`);
-    console.log("2")
     sendEmbed(welEmbed, chan)
-    console.log("3")
 }
 
 sendEmbed = async (data, chan) => {
@@ -73,7 +68,6 @@ sendEmbed = async (data, chan) => {
 
     // Add reactions to embed
     for (const [i, r] of data.reactions.entries()) {
-        // console.log(r, r[0])
         await msg.react(r);
     }
 

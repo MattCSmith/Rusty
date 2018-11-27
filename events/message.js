@@ -41,11 +41,8 @@ module.exports = async (client, message) => {
     // and return a friendly error message.
     if (cmd && !message.guild && cmd.conf.guildOnly)
       return message.channel.send("This command is unavailable via private message. Please run this command in a guild.");
-      console.log("TEST", client.levelCache)
     if (level < client.levelCache[cmd.conf.permLevel]) {
-      console.log("TEST")
       if (client.settings.systemNotice === "true") {
-        console.log("TEST1")
         logit.log(`${message.author.user} issued a command they do not have permission for. They have level $[level}`)
         return message.channel.send(`You do not have permission to use this command.
     Your permission level is ${level} (${client.config.permLevels.find(l => l.level === level).name})

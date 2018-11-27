@@ -15,9 +15,7 @@ module.exports = async (client, reaction, user) => {
     
       
     // Menu Reactions
-    // console.log(reaction)
     if(reaction.message.embeds[0]){
-        console.log("ps")
         menu.react(client, reaction, user)
     }
 };

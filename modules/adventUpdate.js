@@ -44,11 +44,9 @@ module.exports = (client) => {
         await fetch('http://91.121.210.171:42550/data')
             .then(res => res.json())
             .then(json => stats = json);
-        // await console.log(stats)
 
         await chan.fetchMessages({ around: "516298881118633998", limit: 1 })
             .then(messages => {
-                // console.log(messages)
                 const fetchedMsg = messages.first(); // messages is a collection!)
 
                 var dt = new Date();
