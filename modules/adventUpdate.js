@@ -40,10 +40,14 @@ module.exports = (client) => {
     client.getStats = async () => {
         const chan = client.channels.get("516297176335253519");
         let stats;
+        
+        
 
         await fetch('http://91.121.210.171:42550/data')
             .then(res => res.json())
             .then(json => stats = json);
+
+         
 
         await chan.fetchMessages({ around: "516298881118633998", limit: 1 })
             .then(messages => {
@@ -64,7 +68,7 @@ module.exports = (client) => {
                     .setFooter(`❇ Last Updated: ${moment(estDate).format('MMM Do - h:mm a')}`)
 
                 fetchedMsg.edit(newEmbed);
-                client.adventStats = stats
+                
                 
             });
     }
