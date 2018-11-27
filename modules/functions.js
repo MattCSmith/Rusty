@@ -7,6 +7,14 @@ module.exports = (client) => {
       var offset = -300; //Timezone offset for EST in minutes.
       return new Date(dt.getTime() + offset * 60 * 1000);
   }
+  client.dateEST = () =>{
+    //  date convertion to EST
+    var dt = new Date();
+    var offset = -300; //Timezone offset for EST in minutes.
+    let d = new Date(dt.getTime() + offset * 60 * 1000)
+    console.log("DATE __ ", d.getDate())
+    return d.getDate();
+}
 
  /*
     PERMISSION LEVEL FUNCTION
