@@ -1,0 +1,21 @@
+{
+    "name": "Advent",
+    "title": "Advent of Code",
+    "color": "B3000C",
+    "thumb": "http://icons.iconarchive.com/icons/stevelianardo/free-christmas-flat/256/christmas-tree-icon.png",
+    "desc": "Some intro text here.\n\nReaction Options",
+    "reactions": ["🔍", "🔗", "👁", "📋"],
+    "fields": [
+        ["View Challenge", "Check out todays challenge [here](https://www.google.com)", true],
+        ["Submit Solution", "Show off your solution", true],
+        ["View Solutions", "Check out student solutions", true],
+        ["About AoC", "Find out more about AoC here", true]
+    ], 
+    "options": [
+        ["cmd", "advent", "user", ["vc"]],
+        ["cmd", "advent", "user", ["sub"]],
+        ["cmd", "advent", "user", ["view"]],
+        ["cmd", "advent", "user", ["about"]]
+    ]
+    
+}

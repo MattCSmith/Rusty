@@ -1,0 +1,25 @@
+{
+    "name": "Survey App",
+    "title": "Samir's Web Survey App",
+    "color": "#7fbb00",
+    "thumb": "https://cdn.discordapp.com/attachments/483795012702961699/507333804147343360/surveyIcon.png",
+    "desc": "Thank you for showing an interest in the Survey project! You can sign up for the project, by clicking the tick reaction at the bottom of this message. \nOptionally you can also request topic specific updates of your choice by reacting appropriately. \n\nBy leaving the project you will automatically have all the notification roles removed from your account.\n\n",
+    "reactions": ["✅", "❎", "🔙", "💽", "🏜", "🖥"],
+    "fields": [
+        ["Sign Up", "Enroll on the survey project", true],
+        ["Leave", "Leave the survey project ", true],
+        ["Backend Notifications", "Receive specific notifications", true],
+        ["Database Notifications", "Receive specific notifications", true],
+        ["Design Notifications", "Receive specific notifications", true],
+        ["Front-End Notifications", "Receive specific notifications", true]
+    ], 
+    "options": [
+        ["cmd", "samir", "", "join"],
+        ["cmd", "samir", "", "leave"],
+        ["cmd", "samir", "", "Back-End"],
+        ["cmd", "samir", "", "Database"],
+        ["cmd", "samir", "", "Design"],
+        ["cmd", "samir", "", "Front-End"]
+    ]
+    
+}
